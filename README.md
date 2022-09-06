@@ -1,5 +1,4 @@
-# Adera2.0
-Drug repurposing using AI text mining.
+# Adera2.0 : Drug repurposing using AI text mining.
 Adera2.0 is built using python. The purpose of Adera2.0 is to pinpoint drugs that have been already validated for human usage that can be used to treat a different disease.
 For example, there is a disease (A) with no current effective medication. The task of Adera2.0 is to find a known drug that has been already validated to treat disease B. This process is known as drug repurposing. 
 To find these known drugs, Adera can take a question query in one of the following categories
@@ -21,7 +20,8 @@ Having done that, the software calculates the relevance between each matrix repr
 After that, the software proceeds to sort the sentences based on their relevance.
 Then the software extracts the drug names from each relevant sentence.
 The relevant sentences and the drug names are written in separate files.
-#
+
 Case study
+
 In case the user needs to choose a drug for cardiovascular diseases, the best strategy is to look for medications that are known to target a pathway that is common between cardiovascular diseases and the diseases the user wants to purpose from.
 The peer-reviewed manuscript explaining the ptocedure in more detail is available on bioarix and MDPI (soon).
