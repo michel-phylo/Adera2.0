@@ -38,7 +38,7 @@ open your windows CMD and paste:
 Unzip the folder and click on the Adera2.0 icon.
 If you have the Dependencies than you are ready to go !
 
-b) They can download the setup file provided in the Releases page to install Adera2.0.
+b) You can download the setup file provided in the Releases page to install Adera2.0.
 
 `git clone https://github.com/michel-phylo/Adera2.0/Releases/`
 
