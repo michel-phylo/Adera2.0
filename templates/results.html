@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+  <title>Adera</title>
+
+</head>
+<body id="body">
+  <div id="main">
+    <div id="header">
+      <img id="success" src="{{ url_for('static', filename='img/success.svg') }}">
+    </div>
+    <div id="results">
+      <div class="textarea-results">
+        <ul>
+          <li id="result-items">RESULTS:</li>
+          {% for e in results %}
+          <li id="result-items">{{e}}</li>
+          {% endfor %}
+        </ul>
+
+      </div>
+      <div id="button-wrapper">
+        <form action="" method="post">
+          <button class='button is-success'>Save to File</button>
+        </form>
+        <a href='/index'><button class='button is-warning'>Back to Home</button></a>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

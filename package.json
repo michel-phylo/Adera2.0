@@ -1,0 +1,19 @@
+{
+  "name": "adera",
+  "version": "1.0.0",
+  "description": "A drug repurposing software based on AI text mining",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^20.1.1",
+    "find-process": "^1.4.7"
+  },
+  "devDependencies": {
+    "electron": "^20.1.1"
+  }
+}

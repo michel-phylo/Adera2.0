@@ -1,0 +1,118 @@
+* {
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar { 
+    display: none;  
+}
+
+html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100vh;
+    width:100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('/static/img/bg2.webp');
+    background-size: cover;
+}
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+
+#main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    height:100%;
+    width:100%;
+}
+
+#header {
+    width:90%;
+    height:20%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:3vh; 
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+
+#results {
+    height:80%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+    flex-direction: column;
+    gap:10px;
+}
+
+#result-items {
+    text-align: center;
+    font-size: calc(0.7vh + 0.7vw) !important;
+    font-weight:500;
+    font-family:sans-serif;
+    padding-left: 10px;
+    padding-top:10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+#success {
+    height:auto;
+    width:calc(3vw + 3vh);
+}
+
+.textarea-results {
+    height: 100%;
+    width:30%;
+    resize: none;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    overflow:scroll;
+}
+
+.button {
+    width: calc(6vh + 6vw) !important;
+    height: calc(1.5vh + 1.5vw) !important;
+    font-size: calc(0.6vh + 0.6vw) !important;
+}
+
+#button-wrapper {
+    display:flex;
+    gap:10px;
+}

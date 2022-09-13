@@ -1,0 +1,126 @@
+* {
+    font-family: sans-serif;
+}
+
+html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100vh;
+    width:100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url('/static/img/bg2.webp');
+    background-size: cover;
+}
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+
+#main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    height:100%;
+    width:100%;
+}
+
+#header {
+    width:90%;
+    height:30%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:3vh; 
+}
+
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 75px;
+    letter-spacing: 6px;
+    word-spacing: -1px;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+#form {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:70%;
+    width:100%;
+    padding-bottom: 250px;
+}
+
+form {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1vh
+}
+
+#query-string {
+    width:90%;
+}
+
+#input-wrapper {
+    display:flex;
+    height:100%;
+    gap:5px;
+}
+
+#article-count {
+    width:10%;
+}
+
+#warning {
+    color:white;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom:1vh;
+    font-weight:600;
+}
+
+.loader-wrapper {
+    width:100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    z-index: 100;
+    flex-direction: column;
+    gap:5vh;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #792626; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+#quote {
+    font-family: sans-serif;
+    font-size:20px;
+    font-weight: 500;
+    color:white;
+    text-align:center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

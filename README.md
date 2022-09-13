@@ -25,30 +25,31 @@ In case the user needs to choose a drug for cardiovascular diseases, the best st
 
 There is a complete and updated WIKI that could be used to guide you while installing the software and give yuou tips on how to make the best use of it.
 
-## Installation Instructions
-
-Users have two options to use Adera2.0.
-
-a) They can clone this repo and run the adera.exe executable. To do that, you need to the following
-
-open your windows CMD and paste:
-
-`git clone https://github.com/michel-phylo/Adera2.0`
-
-Unzip the folder and click on the Adera2.0 icon.
-If you have the Dependencies than you are ready to go !
-
-b) You can download the setup file provided in the Releases page to install Adera2.0.
-
-`git clone https://github.com/michel-phylo/Adera2.0/Releases/`
-
-Open the folder and click on the setup file Icon (Adera.exe). Installation will start automatically.
-### Dependencies
+## Dependencies
 
 Adera requires Python 3, Node.js and Visual C++ Build Tools already installed in the target machine. 
  
-
-
-
 Adera 2.0 will show a blank, white page during the first run while it downloads and installs the dependencies it needs. The first run can take a while depending on your internet speed. Please be patient. 
 
+## Installation
+
+#### Option 1
+
+You can clone this repo and run Adera manually. 
+
+1. Clone the repo.
+2. While in the directory of the repository, run:
+
+`npm install` to install the Node.js dependencies.
+
+3. After dependencies install, run:
+
+`npm start` to run Adera.
+
+#### Option 2
+
+You can download the zip file from the Releases page, unzip it and run Adera.exe.
+
+#### Option 3 
+
+You can download the setup file provided in the Releases page to install Adera2.0. 

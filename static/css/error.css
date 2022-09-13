@@ -1,0 +1,60 @@
+* {
+    font-family: sans-serif;
+}
+
+html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100vh;
+    width:100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url('/static/img/bg2.webp');
+    background-size: cover;
+}
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+
+#main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    height:100%;
+    width:100%;
+}
+
+#header {
+    width:90%;
+    height:30%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:3vh; 
+}
+
+h1 {
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    letter-spacing: 6px;
+    word-spacing: -1px;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+#home {
+    height: calc(3vh + 3vw);
+    filter: invert(100%);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  <title>Adera</title>
+
+  <script>
+
+    // when the user submits the query
+    // show the loading screen 
+    function startLoading() {
+      var wrapper = document.getElementById('loader-wrapper')
+      var body = document.getElementById('main')
+      var htmld = document.getElementsByTagName('html')
+      
+      body.style.display='none'
+      wrapper.style.display="flex"
+      changeQuotes()
+    }
+
+    // function that displays and replaces 
+    // the quotes on the loading screen
+    async function changeQuotes() {
+      var quotesArray = JSON.parse("[\"There are 5 planets you can see with the naked eye, not using a telescope: Mercury, Venus, Mars, Jupiter and Saturn\", \"Maine is the toothpick capital of the world\", \"There\u0027s a nude beach under the Golden Gate Bridge in San Francisco.\", \"There are over 200 parts in a typical telephone\", \"In some parts of the Atacama Desert it has never rained\", \"Sailors working for the Royal Navy need special permission to grow their beards.\", \"The Dingo Fence in Australia is longer than the distance between New York City to London.\", \"Slavery was once legal in Mauritania.\", \"In 1949 UNICEF produced the first charity Christmas card. The picture shown on the card was painted by a seven year old girl\", \"There is enough concrete in the Hoover Dam to pave a two lane highway from San Francisco to New York\", \"A salmon with two mouths, two sets of teeth and two tongues was caught by Bob Bateman of Canada\", \"George Washington stopped the Revolutionary War to return a lost dog to the enemy.\", \"Being lactose intolerant can cause chronic flatulence\", \"New Zealand is part of the \\\"Zealandia\\\" continent, of which, 93% is submerged.\", \"Persia changed its name to Iran in 1935\", \"Cuddling triggers the same neurological reaction as taking painkillers.\", \"Cap\u0027n Crunch\u0027s full name is Horatio Magellan Crunch\", \"Barack Obama, the 44th President of the U.S., was the first African American to hold the office and the first born outside of the continental U.S.\", \"More than 3000 years ago children played with circular hoops made with grape vines. This toy was swung around the waist. Years later this toy was made by company called Wham-O and the Hula-Hoop was invented in 1958\", \"The United States has paved enough roads to circle the Earth over 150 times.\", \"Americans are responsible for generating roughly 20% percent of the garbage in the world\", \"The Bank of America was originally called the Bank of Italy until the founder, Amedeo Giannini, changed the name in 1930\", \"It takes approximately 12 years for Jupiter to orbit the sun\", \"Glass balls can bounce higher than rubber ones.\", \"Boys have fewer taste buds than girls.\", \"Your brain consumes 25 watts of power while you\u0027re awake. This amount of energy is enough to illuminate a lightbulb.\", \"You can still see traces of Neil Armstrong\u0027s footprints on the moon.\", \"Steve Jobs was awarded 141 new patents since his death\", \"Standing around burns calories. On average, a 150-pound person burns 114 calories per hour while standing and doing nothing.\", \"Jupiter\u0027s Great Red Spot is a storm that has been raging for over 200 years.\", \"In 1631, two London bible printers accidentally left the word \\\"not\\\" out of the seventh commandment, which then read, \\\"Thou shalt commit adultery.\\\" This legendary book is now known as the \\\"Wicked Bible.\\\"\", \"In 1939, 835 sheep were killed by a single lightning strike in Utah.\", \"A snake charmer in Bangladesh once found 3,500 poisonous cobras and their eggs hidden underneath the floors of two suburban homes\", \"Most homes in Bolivia have a dried llama fetus thrown under its foundations for luck\", \"The Soviets landed a spacecraft on Venus in 1970. It became the first to land on another planet and the first to transmit data from there back to Earth\", \"A fetus starts to develop fingerprints at the age of eight weeks\", \"Jupiter\u0027s red spot is getting taller and smaller at the same time.\", \"Approximately 40% of the U.S. paper currency in circulation was counterfeit by the end of the Civil War\", \"Tacoma Narrows Bridge which was located in Washington was nicknamed \\\"Galloping Gertie\\\" because of the unusual way it twisted and swayed with even with the slightest winds when people would drive on it. The bridge collapsed on November 7, 1940, fortunately no humans died, except for a dog\", \"Edwin Armstrong invented FM radio in 1933. The first men to use FM radio to communicate with Earth from the moon\u0027s surface were named Edwin Aldrin and Neil Armstrong.\", \"Monkeys are trained and employed as harvesters of large coconut plantations in Malaysia and Thailand.\", \"Canada has more lakes than the rest of the world\u0027s lakes combined\", \"Canada once heavily targeted LGBTQ individuals.\", \"More than two percent of the American population was killed during the Civil War.\", \"In a year, there are 60,000 trampoline injuries that occur in the U.S\", \"500,000 tons of dog excrement are dumped annually on the streets of Paris\", \"Japan has more than 50,000 people who are over 100 years old.\", \"In 1888, Hollywood was founded by Harvey and Daeida Wilcox, who named the city after their summer home in Chicago\", \"The Federal Emergency Management Agency (FEMA) uses Waffle House Restaurants being open or closed as one way to determine the effect of a storm and the likely scale of assistance required for disaster recovery.\", \"It\u0027s a common tradition in Japan to eat KFC on Christmas. In order to ensure they get their fried chicken, over three million people a year preorder their Christmas meal, sometimes months in advance.\", \"Basketball superstar Wilt Chamberlain holds 56 NBA records\", \"The hydra, which is related to the jellyfish, can grow its body back in a couple of days if it is cut in half\", \"Twelve men have landed on and explored the moon\", \"The budget for the Movie \\\"Titanic\\\" was higher than the Titanic itself\", \"Humans are 50% heavier and four inches taller in the past 100 years than they have been throughout most of human history.\", \"Sloths can hold their breaths for up to 40 minutes.\", \"Lettuce is a member of the sunflower family. Is your mind blown?\", \"The band Duran Duran got their name from an astronaut in the 1968 Jane Fonda movie \\\"Barbarella.\\\"\", \"On average, an ear of a corn has 16 rows and approximately 800 kernels\", \"Figlet, an ASCII font converter program, stands for Frank, Ian and Glenn\u0027s LETters.\", \"Anne Frank wrote most of her diary in the form of letters to a person named \\\"Kitty.\\\"\", \"Hydrogen solid is the most dense substance in the world, at 70.6g/cc\", \"Fossilized bird droppings are one of the chief exports of Nauru, an island nation in the Western Pacific\", \"Benjamin Franklin invented the rocking chair.\", \"All Dutch electric trains are powered by wind energy, serving 600,000 passengers daily\", \"Actor John Travolta was offered the role of Billy Flynn many times for the movie \\\"Chicago.\\\" Richard Gere ended up playing the role\", \"The name Hasbro was invented by the name of the founders: HASsenfeld BROthers\", \"In the border between Egypt and Sudan, there are795 sq miles (2,060 km2) of land unclaimed by neither.\", \"75%of people who marry partners from an affair eventually divorce.\", \"About 80% of the land in Nevada is owned by the federal government.\", \"Dogs have 13 blood types, horses have 8, cows have 9 while Humans only have 4\", \"Apple headquarters\u0027 employees earn an average of US$125,000 a year.\", \"Botanically a rhubarb is a vegetable. It was changed to a fruit in 1947 by a U.S. Custom Court\", \"In a lifetime, an average human produces 10,000 gallons of saliva\", \"Every second, two Barbie dolls are sold somewhere in the world\", \"French artist, Michel Vienkot, uses cow dung as paint when he creates his pictures\", \"The legend of the Loch Ness Monster goes back nearly 1,500 years.\", \"Rudolph the Reindeer is female.\", \"On August 21st, 1911, someone stole the Mona Lisa, the most famous painting in the world, from the Louvre Museum. It was recovered two years later\", \"Coca-Cola once bought all the website URLs that can be read as ahh, all the way up to 62 h\u0027s.\", \"Almost a third of San Francisco\u0027s air pollution comes from China\", \"Dolphins can look in different directions with each eye. They can sleep with one eye open.\", \"The Kool Aid Man used to be known as \\\"Pitcher Man\\\" when he was first introduced in 1975\", \"Mozart wrote the nursery rhyme \u0027twinkle, twinkle, little star\u0027 at the age of 5.\", \"The oldest \\\"your mom\\\" joke was discovered on a 3,500-year-old Babylonian tablet.\", \"Sloths have more neck bones than giraffes\", \"There are different sizes of infinity.\", \"A swarm of 20,000 bees followed a car for two days because their queen was stuck inside.\", \"A white tiger can only be born when both parents carry the gene for white colouring\", \"The average American spends 2.5 days annually looking for lost items.\", \"Some historians believe that Columbus visited Iceland\u0027s Snaefellsnes Peninsula in 1477 and there learned of Viking explorations of the New World.\", \"You can always \\\"see\\\" your nose.\", \"On average, the American household consumes six pounds of peanut butter annually\", \"If you were to spell out numbers, you would you have to go until 1,000 until you would find the letter A.\", \"When former Texas Governor James Hogg was on his deathbed he made a special request that a pecan tree be planted at the head of his grave instead of a tombstone. The governor passed away on March 2, 1906, which is Texas Independence Day. The pecan tree is now the state tree of Texas\", \"Broccoli and cauliflower are the only vegetables that are flowers.\", \"The scene where Indiana Jones shoots the swordsman in Raider\u0027s of the Lost Ark was Harrison Ford\u0027s idea so that he could take a bathroom break.\", \"Those cute furry bits inside a cat\u0027s ear are called \\\"ear furnishings\\\". They ensure that dirt doesn\u0027t go inside and also helps them to hear well.\", \"New Zealand was undiscovered and completely devoid of human beings no more than 800 years ago.\", \"A survey done by Clairol 10 years ago came up with 46% of men stating that it was okay to color their hair. Now 66% of men admit to coloring their hair\"]");      var quoteSpan=document.getElementById("quote")
+      for (i=0;i<quotesArray.length;i++) {
+        if (i==quotesArray.length-1) {
+          i=0
+        } else {
+          quoteSpan.innerText=quotesArray[i];
+          await new Promise(r => setTimeout(r, 5000));
+        }
+
+      }
+    }
+
+    // function that displays a warning when the user tries to change the default article count
+    function warnUser() {
+      var warning=document.getElementById('warning')
+      warning.innerText="The higher the number of articles, the more it will take to produce the results! The default is 10."
+    }
+  </script>
+</head>
+<body id="body">
+  <div id="main">
+    <div id="header">
+      <h1>ADERA</h1>
+    </div>
+    <div id="form">
+      <form action='' method="post">
+        <div id="input-wrapper">
+          <input type="text" class="input is-normal" id="query-string" name="query" placeholder="Your query here...">
+          <input type="text" class="input is-normal" id="article-count" name="count" placeholder="10" onclick="warnUser()">
+        </div>
+        <p id="warning"></p>
+        <input class='button is-info' type='submit' id='submit-btn' value="Submit" onclick="startLoading()">
+      </form>
+    </div>
+  </div>
+  
+</body>
+<div class="loader-wrapper" id="loader-wrapper">
+  <div class="loader"></div> 
+  <span id='quote'></span> 
+</div>
+</html>
