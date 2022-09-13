@@ -29,7 +29,7 @@ There is a complete and updated WIKI that could be used to guide you while insta
 
 Adera requires Python 3, Node.js and Visual C++ Build Tools already installed in the target machine. 
  
-Adera 2.0 will show a blank, white page during the first run while it downloads and installs the dependencies it needs. The first run can take a while depending on your internet speed. Please be patient. 
+***Adera 2.0 will show a blank, white page during the first run while it downloads and installs the dependencies it needs. The first run can take a while depending on your internet speed. Please be patient.***
 
 ## Installation
 
