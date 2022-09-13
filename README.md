@@ -46,10 +46,7 @@ You can clone this repo and run Adera manually.
 
 `npm start` to run Adera.
 
+
 #### Option 2
-
-You can download the zip file from the Releases page, unzip it and run Adera.exe.
-
-#### Option 3 
 
 You can download the setup file provided in the Releases page to install Adera2.0. 
