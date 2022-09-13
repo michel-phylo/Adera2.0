@@ -4,9 +4,12 @@ const {spawn,exec} = require('child_process');
 // initialize the window variable
 let win  
 
-function createWindow() { 
+async function createWindow() { 
     // spawn the flask app
     const python = spawn('python', ['app_adera.py']);
+
+    await new Promise(r => setTimeout(r, 2000)); //sometimes it takes a while for flask server to start, this is to make sure the server
+                                                // is running before we launch the window. This is a TEMPORARY fix, we need to implements this as a callback.
 
     // configure the electron window
     win = new BrowserWindow({width: 1000, height: 800,autoHideMenuBar: true}) 
