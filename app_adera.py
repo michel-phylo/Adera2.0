@@ -89,7 +89,7 @@ def index():
             if count < 1: # if the count is less than 1 then throw an error
                 return render_template('error.html')
         else:
-            count=10 # the default value for count
+            count=25 # the default value for count
         try:
             enough_pdfs=main(query,count) # try running adera
             print(enough_pdfs)

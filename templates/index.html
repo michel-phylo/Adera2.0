@@ -40,7 +40,7 @@
     // function that displays a warning when the user tries to change the default article count
     function warnUser() {
       var warning=document.getElementById('warning')
-      warning.innerText="The higher the number of articles, the more it will take to produce the results! The default is 10."
+      warning.innerText="The higher the number of articles, the more it will take to produce the results! The default is 25."
     }
   </script>
 </head>
@@ -53,7 +53,7 @@
       <form action='' method="post">
         <div id="input-wrapper">
           <input type="text" class="input is-normal" id="query-string" name="query" placeholder="Your query here...">
-          <input type="text" class="input is-normal" id="article-count" name="count" placeholder="10" onclick="warnUser()">
+          <input type="text" class="input is-normal" id="article-count" name="count" placeholder="25" onclick="warnUser()">
         </div>
         <p id="warning"></p>
         <input class='button is-info' type='submit' id='submit-btn' value="Submit" onclick="startLoading()">

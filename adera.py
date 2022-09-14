@@ -110,7 +110,6 @@ def create_database():
     global pdf_count
     pdf_count=0
     for file in os.listdir(download_dir):
-
         # for everyfile in fetched_pdfs, if the file extension is .pdf
         # parse the pdf file, tokenize it, clean up the tokens 
         if not file.endswith(".pdf"):
@@ -123,14 +122,17 @@ def create_database():
         pdf_content = raw_data['content']
         pdf_content = pdf_content.replace('\n\n', '').replace('\n', ' ')
         tokenized_data = sent_tokenize(pdf_content)
-        tokenized_data = clean_tokens(tokenized_data)
-        print('PDF tokenized.')
-        pdf = {'threasa':1,
-        'name':file,
-        'data':tokenized_data}
-        data.append(pdf)
-        i = i+1
-        pdf_count=pdf_count+1
+        if len(tokenized_data) < 100:
+            pass
+        else:
+            tokenized_data = clean_tokens(tokenized_data)
+            print('PDF tokenized.')
+            pdf = {'threasa':1,
+            'name':file,
+            'data':tokenized_data}
+            data.append(pdf)
+            i = i+1
+            pdf_count=pdf_count+1
 
     # write tokens to a json file
     write_to_json(data)
