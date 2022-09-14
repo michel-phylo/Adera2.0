@@ -38,8 +38,8 @@ def initialize():
         simple_logger('first_run is not found. Initalizing Adera.')
         deps = ['beautifulsoup4','Flask','keras','metapub','nltk','numpy','pandas','requests','tensorflow','tensorflow_hub','tika']
         simple_logger('Installed Python dependencies.')
-        from init import init_stuff
-        init_stuff()
+        #from init import init_stuff
+        #init_stuff()
         simple_logger('Downloaded models from TFHUB')
         if hasattr(pip, 'main'):
             for dep in deps:
@@ -91,8 +91,12 @@ def index():
         else:
             count=10 # the default value for count
         try:
-            main(query,count) # try running adera
+            enough_pdfs=main(query,count) # try running adera
+            print(enough_pdfs)
+            if enough_pdfs == "ERROR":
+                return render_template('not_enough_pdfs.html')
         except Exception as e: # if there is an error, show the error page
+            print(e)
             return render_template('error.html')
         return redirect('/results') # if adera is successfully ran, redirect to the results page
     return render_template('index.html') # if the method is get, render the index page.
@@ -114,6 +118,10 @@ def results():
 @app.route('/error', methods=['GET', 'POST'])
 def error():
     return render_template('error.html')
+
+@app.route('/notenoughpdfs', methods=['GET'])
+def not_enough_pdfs():
+    return render_template('not_enough_pdfs.html')
 
 # run the flask app
 if __name__ == '__main__':

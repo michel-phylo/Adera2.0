@@ -87,6 +87,11 @@ def initialize():
     check_download_directory()
     download('punkt')
 
+def check_for_pdfs(pdf_count):
+    if pdf_count < 2:
+        return "NO"
+    
+
 # cleans up the tokens
 # gets rid of references 
 def clean_tokens(tokenized_data):
@@ -105,6 +110,7 @@ def create_database():
     global pdf_count
     pdf_count=0
     for file in os.listdir(download_dir):
+
         # for everyfile in fetched_pdfs, if the file extension is .pdf
         # parse the pdf file, tokenize it, clean up the tokens 
         if not file.endswith(".pdf"):
@@ -243,6 +249,10 @@ def main(query,count):
     initialize()
     download_pdfs(query,count)
     create_database()
-    take_out_trash()
-    analyze(query)
-    extract_drug_names()
+    enough_pdfs=check_for_pdfs(pdf_count)
+    if enough_pdfs == "NO":
+        return 'ERROR'
+    else:
+        take_out_trash()
+        analyze(query)
+        extract_drug_names()
