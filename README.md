@@ -31,6 +31,9 @@ Adera requires Python 3, Node.js and Visual C++ Build Tools already installed in
  
 ***Adera 2.0 will show a blank, white page during the first run while it downloads and installs the dependencies it needs. The first run can take a while depending on your internet speed. Please be patient.***
 
+One way to decrease the time of installation is to run the command
+`pip install requirements.txt`
+
 ## Installation
 
 #### Option 1
@@ -50,3 +53,10 @@ You can clone this repo and run Adera manually.
 #### Option 2
 
 You can download the setup file provided in the Releases page to install Adera2.0. 
+
+## FAQ
+Why Fetching PDF did not succeed?
+The main function that downloads PDFs is called fetch_pdfs. The function is only capable of downloading PDFs that are not behind a pay way. As Pubmed updates its repository daily, the program can stop if it can not download pdfs to work on. The solution is simple, try using a different question.
+
+Why does my list of drugs contain only a few drugs?
+The main reason is that the fetch_pdfs function searches PubMed using Pubmed queries.  As Pubmed updates its repository daily, the results of the search results will vary as new PDFs are added to PubMed.
