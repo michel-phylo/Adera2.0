@@ -58,7 +58,7 @@ You can download the setup file provided in the Releases page to install Adera2.
 
 1) Why did fetching pdfs fail?
 
-Adera can only download and parse PDFs that are not behind a pay wall. Thus, Adera can fail if too many of the articles it needs to parse are inaccessible. The solution is simple but requires some trial and error. Try phrasing your question differently or ask a different question altogether. 
+Adera can only download and parse PDFs that are not behind a paywall. Thus, Adera can fail if too many of the articles it needs to parse are inaccessible. The solution is simple but requires some trial and error. Try phrasing your question differently or ask a different question altogether. 
 
 2) Why does my list of drugs contain only a few drugs?
 
