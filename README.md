@@ -55,8 +55,11 @@ You can clone this repo and run Adera manually.
 You can download the setup file provided in the Releases page to install Adera2.0. 
 
 ## FAQ
-Why Fetching PDF did not succeed?
-The main function that downloads PDFs is called fetch_pdfs. The function is only capable of downloading PDFs that are not behind a pay way. As Pubmed updates its repository daily, the program can stop if it can not download pdfs to work on. The solution is simple, try using a different question.
 
-Why does my list of drugs contain only a few drugs?
-The main reason is that the fetch_pdfs function searches PubMed using Pubmed queries.  As Pubmed updates its repository daily, the results of the search results will vary as new PDFs are added to PubMed.
+1) Why did fetching pdfs fail?
+
+Adera can only download and parse PDFs that are not behind a pay wall. Thus, Adera can fail if too many of the articles it needs to parse are inaccessible. The solution is simple but requires some trial and error. Try phrasing your question differently or ask a different question altogether. 
+
+2) Why does my list of drugs contain only a few drugs?
+
+The main reason is that Adera only searches whichever PDFs are available to it through PubMed.  As Pubmed updates its repository daily, the results of the search results can vary. You can try increasing the article count so that Adera has access to more data, but keep in mind that this will increase the amount of time Adera needs to come up with results. 
